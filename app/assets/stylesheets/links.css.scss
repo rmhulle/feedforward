@@ -91,7 +91,7 @@ input[type="file"] { line-height: normal; }
 .contributor {
   position: relative;
   padding-left: 60px;
-  min-height: 80px;
+  min-height: 60px;
 
   img {
     position: absolute;
@@ -130,6 +130,11 @@ input[type="file"] { line-height: normal; }
       width: 100%;
     }
   }
+}
+
+footer {
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 // Phone in portrait

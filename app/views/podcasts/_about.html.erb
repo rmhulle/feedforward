@@ -22,9 +22,3 @@
   <br/>
   <%= mail_to "chris@excid3.com?subject=I+want+to+join+FeedForward.io!", "Email us" %> or <%= link_to "send us a tweet", "https://twitter.com/intent/tweet?text=%40excid3+%40plantimals+I+want+to+join+FeedForward.io%21&related=excid3,plantimals" %>.
 </div>
-
-<% if user_signed_in? %>
-  <hr />
-  <h4>Admin</h4>
-  <%= link_to "Upload a Podcast", new_podcast_path %>
-<% end %>

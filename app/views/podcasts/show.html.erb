@@ -14,16 +14,7 @@
 
       <br />
 
-      <% if user_signed_in? %>
-        <div class="link-actions">
-          <%= link_to edit_podcast_path(@podcast) do %>
-            <i class="icon-cog"></i>
-          <% end %>
-          <%= link_to @podcast, method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <i class="icon-trash"></i>
-          <% end %>
-        </div>
-      <% end %>
+      <div class="pull-right hits"><span class="label"><%= pluralize @podcast.link_hit.try(:count) || 0, "hit" %></span></div>
 
       <p><%= @podcast.description.html_safe %></p>
 
@@ -39,8 +30,14 @@
 
   <div class="span4">
     <h4>Subscribe To Feed Forward</h4>
-    <p>iTunes</p>
-    <p>RSS</p>
+    <div>
+      <b>
+        <%= link_to podcasts_path(format: :rss) do %>
+          <i class="icon-rss"></i>
+          Podcast RSS Feed
+        <% end %>
+      </b>
+    </div>
 
     <hr />
 

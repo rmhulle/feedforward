@@ -32,13 +32,6 @@ class LinksController < ApplicationController
     @link = Link.new
   end
 
-  # GET /links/1/edit
-  def edit
-    @link = Link.find(params[:id])
-    @link.build_podcast if @link.podcast.nil?
-    @podcast = @link.podcast
-  end
-
   # POST /links
   def create
     @link = current_user.links.new(params[:link])
@@ -48,24 +41,6 @@ class LinksController < ApplicationController
     else
       render action: "new"
     end
-  end
-
-  # PUT /links/1
-  def update
-    @link = Link.find(params[:id])
-
-    if @link.update_attributes(params[:link])
-      redirect_to @link, notice: 'Link was successfully updated.'
-    else
-      render action: "edit"
-    end
-  end
-
-  # DELETE /links/1
-  def destroy
-    @link = Link.find(params[:id])
-    @link.destroy
-    redirect_to links_url, notice: "Link was successfully removed"
   end
 
   def title

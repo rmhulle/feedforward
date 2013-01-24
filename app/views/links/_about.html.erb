@@ -1,33 +1,18 @@
 <div class="about">
   <h3>About FeedForward.io</h3>
   <p>Our goal is to link to <b>only</b> the most interesting articles that we come across. They should inspire you, challenge you, and encourage you.<p>
-  <p><b>We want every article to create discussions.</b></p>
-  <p><%= link_to "http://feeds.feedburner.com/FeedForwardio", class: "btn btn-large btn-primary btn-min-width" do %>Subscribe to our RSS Feed <i class="icon-rss"></i><% end %></p>
-  <p><%= link_to podcasts_path, class: "btn btn-large btn-primary btn-min-width" do %>Listen to our Podcast <i class="icon-headphones"></i><% end %></p>
 </div>
-<hr />
 
-<h4>Feed Contributors</h4>
-
-<div class="contributor">
-  <%= link_to avatar_image("excid3@gmail.com"), "http://excid3.com", target: "_blank" %>
-  <div class="name"><%= link_to "Chris Oliver", "http://excid3.com" %></div>
-  <div class="twitter">
-    <a href="https://twitter.com/excid3" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @excid3</a>
-  </div>
-</div>
-<div class="contributor">
-  <%= link_to avatar_image("cosmodrome@gmail.com"), "http://archetyp.al", target: "_blank" %>
-  <div class="name"><%= link_to "Rob Long", "http://archetyp.al/", target: "_blank" %></div>
-  <div class="twitter">
-    <a href="https://twitter.com/plantimals" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @plantimals</a>
-  </div>
+<div>
+  <strong>Have an article to submit? Want to join us?</strong>
+  <br/>
+  <%= link_to "Start Sharing With Us", new_user_registration_path, class: "btn btn-primary btn-large btn-min-width" %>
 </div>
 
 <hr />
 
 <div>
-  <strong>Have an article to submit? Want to join us?</strong>
-  <br/>
-  <%= mail_to "chris@excid3.com?subject=I+want+to+join+FeedForward.io!", "Email us" %> or <%= link_to "send us a tweet", "https://twitter.com/intent/tweet?text=%40excid3+%40plantimals+I+want+to+join+FeedForward.io%21&related=excid3,plantimals" %>.
+  <strong>We want every article to create discussions.</strong>
+  <p><%= link_to "http://feeds.feedburner.com/FeedForwardio", class: "btn btn-large btn-min-width" do %>Subscribe to the RSS Feed <i class="icon-rss"></i><% end %></p>
+  <p><%= link_to podcasts_path, class: "btn btn-large btn-min-width" do %>Listen to the Podcast <i class="icon-headphones"></i><% end %></p>
 </div>
