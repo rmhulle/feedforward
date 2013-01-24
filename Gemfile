@@ -12,6 +12,7 @@ gem "paperclip", "~> 3.3.1"
 gem "will_paginate", "~> 3.0.3"
 gem "will_paginate-bootstrap", "~> 0.2.1"
 gem "html-pipeline", "~> 0.0.6"
+gem "charlock_holmes", git: "git://github.com/brianmario/charlock_holmes.git", branch: "bundle-icu"
 
 # Gems used only for assets and not required
 # in production environments by default.
