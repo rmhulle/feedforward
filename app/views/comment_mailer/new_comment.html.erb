@@ -1,0 +1,4 @@
+<p><%= @user.full_name %> just commented on <%= @link.title %>:</p>
+<blockquote><%= formatted_body(@comment.body) %></blockquote>
+
+<p><%= link_to "View this on FeedForward.io", link_url(@link) %></p>

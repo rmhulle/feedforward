@@ -31,7 +31,7 @@
     <%= form_for [@link, @comment] do |f| %>
       <%= f.text_area :body, rows: 4 %>
 
-      <div class="pull-left">Woah, this supports <%= link_to "markdown syntax", "http://daringfireball.net/projects/markdown/syntax" %>!</div>
+      <div class="pull-left">Woah, this supports <%= link_to "markdown syntax", "http://daringfireball.net/projects/markdown/syntax", tabindex: "-1" %>!</div>
       <div class="pull-right"><%= f.submit class: "btn" %></div>
     <% end %>
   </div>
