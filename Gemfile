@@ -22,7 +22,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "less-rails", "~> 2.3.2" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'jquery-rails'
 
 group :development do
