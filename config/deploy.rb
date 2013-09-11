@@ -7,7 +7,7 @@ set :scm, :git
 set :repository,  "git@github.com:excid3/feedforward.git"
 set :default_environment, { 'PATH' => '/usr/local/rvm/gems/ruby-1.9.3-p125/bin:/usr/local/rvm/gems/ruby-1.9.3-p125@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p125/bin:/usr/local/rvm/bin:$PATH' }
 
-set :location, "excid3.com"
+set :location, "72.14.187.18"
 role :web, location
 role :app, location
 role :db,  location, :primary => true
