@@ -32,12 +32,17 @@
           <% end %>
           <div class="container">
             <ul class="nav pull-right">
-              <%= nav_link "podcasts" do %>
-                <%= link_to podcasts_path do %><span class="hidden-phone">Feed Forward </span>Podcast <i class="icon-headphones"></i><% end %>
-              <% end %>
               <%= nav_link "links" do %>
-                <%= link_to root_path do %>Articles <i class="icon-list-alt"></i><% end %>
+                <%= link_to root_path do %><i class="icon-list-alt"></i> Articles<% end %>
               <% end %>
+              <%= nav_link "podcasts" do %>
+                <%= link_to podcasts_path do %><i class="icon-headphones"></i> Podcast<% end %>
+              <% end %>
+
+              <%= nav_link "devise" do %>
+                <%= link_to edit_user_registration_path do %><i class="icon-user"></i> Account<% end %>
+              <% end %>
+
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -76,7 +81,7 @@
         <div class='pull-right'>
           <small>
             <% if user_signed_in? %>
-              Logged in as <%= current_user.email %> |
+              Logged in as <%= link_to current_user.email, edit_user_registration_path %> |
               <%= link_to "Logout", destroy_user_session_path, method: :delete %>
             <% else %>
               <%= link_to "Login", new_user_session_path %> |

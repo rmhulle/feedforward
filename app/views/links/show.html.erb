@@ -10,9 +10,7 @@
       <%= avatar_image(comment.user.email) %>
     </div>
 
-    <div>
-      <small><%= link_to comment.user.full_name, "https://twitter.com/#{comment.user.twitter}" %> commented</small>
-    </div>
+    <div><small><strong><%= comment.user.full_name %></strong> commented</small></div>
 
     <div class="body">
       <%= formatted_body comment.body %>
