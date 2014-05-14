@@ -10,7 +10,10 @@ gem "gravatar_image_tag", "~> 1.1.3"
 gem "paperclip", "~> 3.3.1"
 gem "will_paginate", "~> 3.0.3"
 gem "will_paginate-bootstrap", "~> 0.2.1"
-gem "html-pipeline", "~> 0.0.6"
+
+gem 'github-markdown', '~> 0.6.5'
+gem 'rinku', '~> 1.7.3'
+gem 'html-pipeline', '~> 1.8.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
